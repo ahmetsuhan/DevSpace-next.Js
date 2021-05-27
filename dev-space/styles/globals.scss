@@ -4,6 +4,7 @@
 
 @import "./pages/AboutPage.style.scss";
 @import "./pages/NotFoundPage.style.scss";
+@import "./pages/BlogPage.style.scss";
 
 *,
 ::after,
@@ -15,6 +16,17 @@
 
 html {
   font-size: 10px;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 2.4rem;
 }
 
 a,
