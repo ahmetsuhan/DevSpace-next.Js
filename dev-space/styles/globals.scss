@@ -1,0 +1,17 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+a,
+a:visited,
+a:link {
+  text-decoration: none;
+}
