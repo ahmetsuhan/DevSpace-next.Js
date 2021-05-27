@@ -1,0 +1,29 @@
+.about-page {
+  font-size: 2rem;
+
+  > h1 {
+    font-size: 5rem;
+    border-bottom: 0.4rem solid $color-light-dark-1;
+    padding-bottom: 0.5rem;
+  }
+
+  div {
+    background-color: $color-white;
+    box-shadow: 0 1rem 2rem 0 $color-light-dark-1;
+    padding: 1.2rem 2rem;
+    margin-top: 1.2rem;
+    border-radius: 0.6rem;
+    > h3 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+
+      & + p {
+        margin-bottom: 0.6rem;
+
+        & + span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
