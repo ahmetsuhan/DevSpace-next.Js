@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Header from "./Header";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
@@ -10,7 +11,7 @@ const Layout = ({ title, keywords, description, children }) => {
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
       </Head>
-
+      <Header />
       <main className="container ">{children}</main>
     </div>
   );

@@ -1,0 +1,48 @@
+.header {
+  &-container {
+    width: 100%;
+    height: auto;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: $bg-gray-700;
+
+    @media screen and (max-width: 680px) {
+      & {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        nav {
+          margin: 0.5rem 0;
+        }
+      }
+    }
+
+    a {
+      color: $color-white;
+      display: flex;
+      align-items: center;
+      > span {
+        margin-left: 1rem;
+        font-size: 3rem;
+      }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 1rem 1rem;
+        text-transform: uppercase;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
