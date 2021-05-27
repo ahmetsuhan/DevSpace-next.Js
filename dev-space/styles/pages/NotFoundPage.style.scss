@@ -1,0 +1,22 @@
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20rem;
+
+  img {
+    background-color: $bg-gray-800;
+    border-radius: 2rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+    margin: 5rem 0;
+  }
+  h2 {
+    font-size: 4rem;
+    color: $color-gray-400;
+    margin-bottom: 1rem;
+  }
+}
