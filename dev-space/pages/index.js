@@ -8,7 +8,7 @@ import Post from "@/components/Post";
 import { sortByDate } from "@/utils/index";
 
 export default function Home({ posts }) {
-  console.log(posts);
+  //console.log(posts);
   return (
     <Layout>
       <div className="home-page">

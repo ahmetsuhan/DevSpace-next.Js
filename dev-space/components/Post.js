@@ -4,7 +4,7 @@ import Image from "next/image";
 import CategoryLabel from "./CategoryLabel";
 
 const Post = ({ post }) => {
-  console.log(post);
+  //console.log(post);
   return (
     <div className="post">
       <Image
