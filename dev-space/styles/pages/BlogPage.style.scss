@@ -24,13 +24,13 @@
       width: 33%;
       height: auto;
       padding: 1rem;
-      @media screen and (max-width: 577px) {
+      @media screen and (max-width: 899px) {
         & {
           width: 100%;
         }
       }
 
-      @media screen and (min-width: 578px) and (max-width: 1199px) {
+      @media screen and (min-width: 900px) and (max-width: 1199px) {
         & {
           width: 50%;
         }
@@ -38,7 +38,7 @@
 
       @media screen and (min-width: 1200px) {
         & {
-          width: 33%;
+          width: 25%;
         }
       }
     }
