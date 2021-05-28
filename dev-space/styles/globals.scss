@@ -5,6 +5,7 @@
 @import "./pages/AboutPage.style.scss";
 @import "./pages/NotFoundPage.style.scss";
 @import "./pages/BlogPage.style.scss";
+@import "./pages/HomePage.style.scss";
 
 *,
 ::after,
@@ -33,4 +34,33 @@ a,
 a:visited,
 a:link {
   text-decoration: none;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: inherit;
+  font-size: inherit;
+}
+.btn.btn-block {
+  display: block;
+  font-size: 2rem;
+}
+.btn.btn-fulled {
+  background-color: $color-gray-400;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-fulled:hover {
+  background-color: $color-black;
+  color: $color-white;
+  border: 1px solid;
+}
+
+.btn:focus {
+  outline: none;
 }
