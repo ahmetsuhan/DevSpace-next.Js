@@ -1,12 +1,28 @@
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 import matter from "gray-matter";
 import Layout from "../components/Layout";
+import Post from "../components/Post";
 export default function Home({ posts }) {
   console.log(posts);
   return (
     <Layout>
-      <h1>Hello! </h1>
+      <div className="home-page">
+        <h1>Latest Posts</h1>
+        <div className="home-page-container">
+          {posts.map((post, index) => {
+            return (
+              <div key={index} className="post-area">
+                <Post post={post} />
+              </div>
+            );
+          })}
+        </div>
+        <Link href="/blog">
+          <a className="btn btn-block btn-fulled">All Posts</a>
+        </Link>
+      </div>
     </Layout>
   );
 }

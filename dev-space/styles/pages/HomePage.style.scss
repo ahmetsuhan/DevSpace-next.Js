@@ -1,0 +1,46 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+
+  > h1 {
+    font-size: 5rem;
+    border-bottom: 0.4rem solid $color-light-dark-1;
+  }
+
+  &-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 577px) {
+      & {
+        justify-content: center;
+      }
+    }
+
+    .post-area {
+      width: 33%;
+      height: auto;
+      padding: 1rem;
+      @media screen and (max-width: 577px) {
+        & {
+          width: 100%;
+        }
+      }
+
+      @media screen and (min-width: 578px) and (max-width: 1199px) {
+        & {
+          width: 50%;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        & {
+          width: 33%;
+        }
+      }
+    }
+  }
+}
