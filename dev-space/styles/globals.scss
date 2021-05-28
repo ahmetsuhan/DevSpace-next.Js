@@ -6,6 +6,7 @@
 @import "./pages/NotFoundPage.style.scss";
 @import "./pages/BlogPage.style.scss";
 @import "./pages/HomePage.style.scss";
+@import "./pages/PostPage.style.scss";
 
 *,
 ::after,
@@ -36,6 +37,60 @@ a:link {
   text-decoration: none;
 }
 
+p {
+  margin: 1.5rem 0;
+  line-height: 1.8;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.blog-text {
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+  font-size: 2rem;
+
+  ul,
+  ol {
+    font-size: 2rem;
+    line-height: 2.3;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  pre {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin: 1rem 0;
+    line-height: 2.3;
+    white-space: pre-line;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2,
+  h3,
+  h4 {
+    font-size: 2.7rem;
+  }
+
+  a {
+    text-decoration-style: none;
+    color: $color-black;
+    text-decoration-line: underline;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration-line: none;
+    }
+  }
+}
+
 .btn {
   border: none;
   background-color: transparent;
@@ -45,22 +100,24 @@ a:link {
   border-radius: 0.5rem;
   color: inherit;
   font-size: inherit;
-}
-.btn.btn-block {
-  display: block;
-  font-size: 2rem;
-}
-.btn.btn-fulled {
-  background-color: $color-gray-400;
-  transition: background-color 0.3s ease;
-}
 
-.btn.btn-fulled:hover {
-  background-color: $color-black;
-  color: $color-white;
-  border: 1px solid;
-}
+  &:focus {
+    outline: none;
+  }
 
-.btn:focus {
-  outline: none;
+  &.btn-block {
+    display: block;
+    font-size: 2rem;
+  }
+
+  &.btn-fulled {
+    background-color: $color-gray-400;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+      border: 1px solid;
+    }
+  }
 }
