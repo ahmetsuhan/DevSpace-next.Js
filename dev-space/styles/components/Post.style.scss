@@ -22,7 +22,9 @@
       color: $bg-gray-600;
     }
     &-category {
-      color: $bg-gray-600;
+      a {
+        color: $bg-gray-600;
+      }
     }
   }
 
