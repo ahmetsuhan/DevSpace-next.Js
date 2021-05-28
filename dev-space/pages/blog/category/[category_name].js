@@ -3,22 +3,33 @@ import path from "path";
 import matter from "gray-matter";
 import Layout from "@/components/Layout";
 import Post from "@/components/Post";
+import CategoryList from "@/components/CategoryList";
 
 import { getPosts } from "@/lib/posts";
 
-export default function CategoryBlogPage({ posts, categoryName }) {
+export default function CategoryBlogPage({ posts, categoryName, categories }) {
+  console.log(categories);
+
   return (
     <Layout>
       <div className="category-blog-page">
-        <h1>Posts in {categoryName}</h1>
         <div className="category-blog-page-container">
-          {posts.map((post, index) => {
-            return (
-              <div key={index} className="post-area">
-                <Post post={post} />
-              </div>
-            );
-          })}
+          <div className="category-blog-page-container-left">
+            <h1 className="category-blog-page-title">Blog</h1>
+            <div className="category-blog-page-posts-container">
+              {posts.map((post, index) => {
+                return (
+                  <div key={index} className="post-area">
+                    <Post post={post} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="category-blog-page-container-right">
+            <CategoryList categories={categories} />
+          </div>
         </div>
       </div>
     </Layout>
@@ -51,6 +62,9 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params: { category_name } }) {
   const posts = getPosts();
 
+  const categories = posts.map((post) => post.frontmatter.category);
+  const uniqueCategories = [...new Set(categories)];
+
   const categoryPosts = posts.filter(
     (post) => post.frontmatter.category.toLowerCase() === category_name
   );
@@ -59,6 +73,7 @@ export async function getStaticProps({ params: { category_name } }) {
     props: {
       posts: categoryPosts,
       categoryName: category_name,
+      categories: uniqueCategories,
     },
   };
 }
