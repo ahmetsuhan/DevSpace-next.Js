@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import Layout from "../../../components/Layout";
 import Post from "../../../components/Post";
+import Pagination from "../../../components/Pagination";
 
 import { sortByDate } from "../../../utils";
 import { POSTS_PER_PAGE } from "../../../config";
@@ -23,6 +24,7 @@ export default function BlogPage({ posts, numPages, currentPage }) {
           })}
         </div>
       </div>
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );
 }
