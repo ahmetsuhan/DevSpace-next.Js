@@ -9,13 +9,25 @@
     flex-wrap: wrap;
 
     &-left {
-      width: 75%;
+      width: calc(100% - 300px);
+
+      @media screen and (max-width: 767px) {
+        & {
+          width: 100%;
+        }
+      }
     }
 
     &-right {
-      width: 25%;
-      height: 500px;
+      width: 300px;
       margin-top: 7.3rem;
+
+      @media screen and (max-width: 767px) {
+        & {
+          width: 0;
+          display: none;
+        }
+      }
     }
   }
 
