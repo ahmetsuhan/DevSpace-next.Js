@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import SearchResults from "./SearchResults";
 const Searchbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -35,6 +36,7 @@ const Searchbar = () => {
           </form>
         </div>
       </div>
+      {searchTerm !== "" && <SearchResults results={searchResults} />}
     </div>
   );
 };
