@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
+import Searchbar from "@/components/Searchbar";
 
 const Layout = ({ title, keywords, description, children }) => {
   return (
@@ -12,6 +13,7 @@ const Layout = ({ title, keywords, description, children }) => {
         <meta name="description" content={description} />
       </Head>
       <Header />
+      <Searchbar />
       <main className="container ">{children}</main>
     </div>
   );
